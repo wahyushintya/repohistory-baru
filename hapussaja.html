@@ -1,0 +1,117 @@
+int LED = 8;
+char slave, masuk;
+void setup(){
+Serial.begin(9600);
+pinMode(LED, OUTPUT);
+}
+
+void loop(){
+	// komunikasi dari master
+	if (Serial.available())
+	{
+	slave = Serial.read();
+	Serial.println(slave);
+	}
+
+	//saklar
+if (Serial.available())
+{
+masuk= Serial.read();
+Serial.println(masuk)
+}
+
+if(masuk == '1')
+{
+digitalWrite(LED, HIGH);
+Serial.println("Oooo Idup")
+delay (50);
+}
+
+if(masuk == '0')
+{
+digitalWrite(LED,LOW);
+Serial.println("Oooo mati");
+delay (50);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+char master;
+void setup()
+{
+Serial.begin(9600);
+}
+
+void loop()
+{
+if (Serial.available() )
+{
+master = Serial.read();
+Serial.write(master);
+Serial.println();
+delay(500);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================
