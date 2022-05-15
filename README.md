@@ -5,5 +5,3 @@ Profile :
 Name : Putu Wahyu Shintya Dewi
 Birth : 17 Desember 2005
 Age : 16
-===========================
-this html code from pc
